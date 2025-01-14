@@ -1,6 +1,7 @@
 # rt
 
 `rt` is a simple command-line tool written in C++ that executes a given command and measures the time taken for its execution. It is built using CMake and supports both Debug and Release builds.
+![image](https://github.com/user-attachments/assets/80b2da87-5882-4530-8c8e-d255d53033d0)
 
 ## Features
 
