@@ -24,7 +24,7 @@ To build the project, follow these steps:
     cd rt
     aura build
     ```
-    
+
 ## Usage
 
 To use the [rt](http://_vscodecontentref_/0) tool, run the following command:
@@ -32,7 +32,7 @@ To use the [rt](http://_vscodecontentref_/0) tool, run the following command:
 ./rt <command>
 
 ## Example
-
+rt g++ main.cc -o app
 This will compile main.cc and display the time taken for the compilation.
 
 License
