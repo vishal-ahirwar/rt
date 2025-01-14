@@ -1,4 +1,3 @@
-
 // Auto Genrated C++ file by aura CLI
 // Copyright 2023 Vishal Ahirwar //replace it with your copyright notice!
 #include <cstdio>
