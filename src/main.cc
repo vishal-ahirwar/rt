@@ -8,18 +8,20 @@ class RT
 {
 private:
     clock_t _start;
-    clock_t _end;
     std::string _msg;
 
 public:
     RT(const std::string &msg = "");
     ~RT();
 };
-RT::RT(const std::string &msg) : _msg(msg), _start(clock()) {};
+RT::RT(const std::string &msg) : _msg(msg)
+{
+    _start = clock();
+};
 RT::~RT()
 {
-    _end = clock();
-    printf("Total time taken by %s :  %.2fs\n", _msg.c_str(), (double)(_end - _start) / CLOCKS_PER_SEC);
+    auto _end = clock();
+    printf("Total time taken by %s :  %.4fs\n", _msg.c_str(), (double)(_end - _start) / CLOCKS_PER_SEC);
 };
 
 int main(int argc, char *argv[])
