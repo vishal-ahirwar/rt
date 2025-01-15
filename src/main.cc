@@ -7,21 +7,23 @@
 class RT
 {
 private:
-    clock_t _start;
+    std::chrono::time_point<std::chrono::high_resolution_clock> _start;
+    std::chrono::time_point<std::chrono::high_resolution_clock> _end;
     std::string _msg;
 
 public:
     RT(const std::string &msg = "");
     ~RT();
 };
-RT::RT(const std::string &msg) : _msg(msg)
+RT::RT(const std::string &msg) : _msg(msg),_end{}
 {
-    _start = clock();
+    _start =std::chrono::high_resolution_clock::now();
 };
 RT::~RT()
 {
-    auto _end = clock();
-    printf("Total time taken by %s :  %.4fs\n", _msg.c_str(), (double)(_end - _start) / CLOCKS_PER_SEC);
+    auto _end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double>elapsed_time{_end-_start};
+    printf("Total time taken by %s :  %.2fs\n", _msg.c_str(),elapsed_time.count());
 };
 
 int main(int argc, char *argv[])

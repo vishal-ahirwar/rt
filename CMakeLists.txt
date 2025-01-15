@@ -2,7 +2,7 @@
 #Auto Genrated CMake file by aura CLI
 #Copyright 2023 Vishal Ahirwar. #replace with your copyright notice.
 cmake_minimum_required(VERSION 3.6...3.31)
-project(rt VERSION 1.0.0 LANGUAGES CXX)
+project(rt VERSION 1.0.1 LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
