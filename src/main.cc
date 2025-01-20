@@ -4,6 +4,8 @@
 #include <rtconfig.h>
 #include <chrono>
 #include <string>
+#include<fmt/color.h>
+#include<fmt/core.h>
 class RT
 {
 private:

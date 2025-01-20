@@ -14,10 +14,12 @@ set(COPYRIGHT "Copyright(c) ${CURRENT_YEAR} Vishal Ahirwar")
 include_directories(src ${CMAKE_BINARY_DIR})
 configure_file(rtconfig.h.in rtconfig.h)
 #@find
+find_package(fmt REQUIRED)
 set(SOURCE ./src/main.cc)#add your additional source file here!
 add_executable(${PROJECT_NAME} ${SOURCE})
 install(TARGETS ${PROJECT_NAME} DESTINATION bin)
 #@link
+target_link_libraries(${PROJECT_NAME} fmt::fmt)
 
 include(InstallRequiredSystemLibraries)
 set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/License.txt")
