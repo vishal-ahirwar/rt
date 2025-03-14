@@ -1,1 +1,0 @@
-{"build":"Thu Feb 27 17:00:00 2025","cmakeArgs":["-DBUILD_SHARED_LIBS=OFF","-DSTATIC_LINK=ON","-DCMAKE_CXX_COMPILER=clang++","-DCMAKE_C_COMPILER=clang","-Dfmt_DIR=external\\fmt/install/lib/cmake/fmt"],"developerName":"None","projectName":"rt"}
