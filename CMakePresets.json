@@ -3,7 +3,7 @@
   "version": 2,
   "configurePresets": [
     {
-      "name": "vcpkg",
+      "name": "default",
       "generator": "Ninja",
       "binaryDir": "${sourceDir}/build",
       "cacheVariables": {
@@ -11,16 +11,16 @@
       }
     },
     {
-      "name": "windows",
-      "inherits": "vcpkg",
+      "name": "windows-static-build",
+      "inherits": "default",
       "cacheVariables": {
         "VCPKG_TARGET_TRIPLET": "x64-windows-static",
         "CMAKE_CXX_COMPILER":"clang++"
       }
     },
     {
-      "name": "linux",
-      "inherits": "vcpkg",
+      "name": "linux-static-build",
+      "inherits": "default",
       "cacheVariables": {
         "VCPKG_TARGET_TRIPLET": "x64-linux",
         "CMAKE_CXX_COMPILER":"clang++",
@@ -28,8 +28,8 @@
       }
     },
     {
-      "name": "osx",
-      "inherits": "vcpkg",
+      "name": "osx-static-build",
+      "inherits": "default",
       "cacheVariables": {
         "VCPKG_TARGET_TRIPLET": "x64-osx",
         "CMAKE_CXX_COMPILER":"clang++",
