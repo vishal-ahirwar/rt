@@ -18,11 +18,11 @@ class RT {
   RT(const std::string &msg = "");
   ~RT();
 };
-RT::RT(const std::string &msg) : _msg(msg), _end{} {
+RT::RT(const std::string &msg) : _end{}, _msg(msg) {
   _start = std::chrono::high_resolution_clock::now();
 };
 RT::~RT() {
-  auto _end = std::chrono::high_resolution_clock::now();
+  _end = std::chrono::high_resolution_clock::now();
   std::chrono::duration<double> elapsed_time{_end - _start};
   printf("Total time taken by %s :  %.2fs\n", _msg.c_str(),
          elapsed_time.count());
